@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  * Created by vladimir on 22.04.18.
  */
 
-final class Anagrams {
+public final class Anagrams {
 
     private Anagrams() {}
 
