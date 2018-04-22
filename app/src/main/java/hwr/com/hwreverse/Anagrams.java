@@ -11,7 +11,7 @@ final class Anagrams {
 
     private Anagrams() {}
 
-    public static String reverse (String s) {
+    public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
     }
 
