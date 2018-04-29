@@ -3,13 +3,11 @@ package hwr.com.hwreverse;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by vladimir on 22.04.18.
- */
 
 public final class Anagrams {
 
-    private Anagrams() {}
+    private Anagrams() {
+    }
 
     public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
@@ -18,8 +16,8 @@ public final class Anagrams {
     public static String reverseIgnoreNotLiteral(String input) {
         StringBuilder sb = new StringBuilder();
         String[] words = input.split(" ");
-        for (String s : words) {
-            char[] out = s.toCharArray();
+        for (int i = 0; i < words.length; i++) {
+            char[] out = words[i].toCharArray();
             int start = 0;
             int end = out.length - 1;
             char temp;
@@ -34,12 +32,14 @@ public final class Anagrams {
                 end--;
                 start++;
             }
-            sb.append(new String(out)).append(" ");
+            sb.append(new String(out));
+            if (words.length > 1 && i < words.length - 1)
+                sb.append(" ");
         }
         return new String(sb);
     }
 
-    private static boolean stateReverse (char c) {
+    private static boolean stateReverse(char c) {
         Pattern p = Pattern.compile("[a-zA-Z]");
         Matcher m = p.matcher(String.valueOf(c));
         return m.matches();
