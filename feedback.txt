@@ -1,0 +1,25 @@
+    @BindView(R.id.etInput)
+    EditText editText;
+
+    лишнее
+
+    android:text="Result:"
+
+    Нужно сделать анализ на hardcode string в Analyze - Inspect code
+
+Нужно сделать нормальный spoon
+
+robolectric - нужно протестировать активити
+
+Запуск нужно через Suit
+
+
+AnagramUnitTest - имя и проверка на null
+
+
+./gradlew spoon - правильная команда
+
+
+
+и убрери лишенее
+
